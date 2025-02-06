@@ -1,0 +1,11 @@
+services: #container saved inside this services config
+
+  # container for nginx
+  nginx-example:
+    image:  nginx:latest
+    container_name: nginx-example
+  
+  #container for mongodb
+  mongodb-example:  
+    image:  mongo:latest
+    container_name: mongodb-example

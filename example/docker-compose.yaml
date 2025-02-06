@@ -1,5 +1,5 @@
-version: "3.8"
-#example create container
+#version: "3.8" # no longer used in recent docker compose
+
 services:
   nginx-example:
     container_name: nginx-example
