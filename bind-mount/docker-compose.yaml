@@ -1,0 +1,28 @@
+services:
+  mongodb1-example:
+    image: mongo:latest
+    container_name: mongodb1-example
+    ports:
+      - "27019:27017"
+    environment: #match with image
+      MONGO_INITDB_ROOT_USERNAME: example
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: admin
+    volumes:
+      - "./data-mongo1:/data/db" #refer to current directory when docker compose placed
+
+
+  mongodb2-example:
+    image: mongo:latest
+    container_name: mongodb2-example
+    ports:
+      - "27020:27017"
+    environment: #match with image
+      MONGO_INITDB_ROOT_USERNAME: example
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: admin
+    volumes:
+      - type: bind 
+        source: "./data-mongo2"
+        target: "/data/db"
+        read_only: false

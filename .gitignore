@@ -1,0 +1,4 @@
+/bind-mount/data-mongo1/*
+!/bind-mount/data-mongo1/.gitkeep
+/bind-mount/data-mongo2/*
+!/bind-mount/data-mongo2/.gitkeep
